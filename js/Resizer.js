@@ -19,6 +19,8 @@ export default class Resizer {
 
         this.viewport.addEventListener('mousemove', (e) => this.mouseMove(e))
         this.viewport.addEventListener('mouseup', (e) => this.mouseUp(e))
+
+        this.resizer.addEventListener('touchmove', (e) => this.touchMove(e))
     }
 
     handleEvent(e) {
@@ -47,6 +49,14 @@ export default class Resizer {
             document.querySelector('html').style = 'cursor: ew-resize'
             this.viewportIframe.style.width = e.pageX + 'px'
         }
+    }
+
+    touchMove(e) {
+        if (e.changedTouches[0].pageX > 400) {
+            this.handleIframeHeight()
+            this.viewportIframe.style.width = e.changedTouches[0].pageX + 'px'
+        }
+
     }
 
     handleIframeHeight() {
