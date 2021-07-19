@@ -63,7 +63,7 @@ export default class View {
                                 </body>
                                 </html>"></iframe>
                             </div>
-                            <div class="resizer bg-gray-200 flex items-center h-full absolute top-0 right-0" style="cursor: ew-resize;" id="resizer">
+                            <div class="resizer bg-gray-200 items-center h-full w-4 absolute top-0 right-0 hidden md:flex" style="cursor: ew-resize;" id="resizer">
                                 <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
                                 </svg>
